@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#grid_wrapper {
+    display: grid;
+    grid-template-areas: 
+    "he he"
+    "na na"
+    "ma ma"
+    "fo fo";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 70px 400px 1fr;
+    height: 100vh;
+}
+
+#header {
+    grid-area: he;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav {
+    grid-area: na;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background-color: white;
+    width: 200px;
+    left: 0px;
+    position: absolute;
+    align-items: center;
+    top: -300px;
+    transition: all 0.5s;
+    justify-content: space-around;
+}
+
+.nav_active {
+    transform: translateY(470px);
+}
+
+.nav_burger {
+    cursor: pointer;
+}
+
+.nav_burger div {
+    height: 4px;
+    width: 35px;
+    background-color: black;
+    margin: 7px;
+    border-radius: 10%;
+    transition: all 0.1s;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-9px,-6px);
+}
+
+.links {
+    list-style: none;
+}
+
+.links_decoration {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+#main {
+    grid-area: ma;
+    background-color: darkblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.men_section {
+    height: 90%;
+    width: 45%;
+    background-color: lightcoral;
+}
+
+.women_section {
+    height: 90%;
+    width: 45%;
+    background-color: lightcoral;
+}
+
+#footer {
+    grid-area: fo;
+    background-color: grey;
+}
